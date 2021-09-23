@@ -4,7 +4,7 @@ module.exports = {
   aliases: ["vol"],
   usage: "vol <數字>",
   description: "換現在音樂的聲音大小",
-  run: async (client, message, args) => {
+  run: async (client, message, args) => { //指令名字和用途
 
 
 
@@ -42,7 +42,7 @@ const embed1 = new Discord.MessageEmbed()
 
 
 		serverQueue.connection.dispatcher.setVolumeLogarithmic(args[0] / 5);
-		return message.channel.send(embed4);
+		return message.channel.send(embed4); //指令的車鞥是
 
 
   }

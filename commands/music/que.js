@@ -4,7 +4,7 @@ module.exports = {
   aliases: ["q"],
   usage: "播放列表",
   description: "查看現在的播放列表",
-  run: async (client, message, args) => {
+  run: async (client, message, args) => {//指令名字和用途
 
 
 
@@ -24,7 +24,7 @@ const serverQueue = message.client.queue.get(message.guild.id);
     })
     .setColor("GREEN")
 
-    return message.channel.send(embed)
+    return message.channel.send(embed)//指令的程式
 
 
 

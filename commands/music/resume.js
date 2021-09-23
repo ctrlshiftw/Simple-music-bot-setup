@@ -4,7 +4,7 @@ module.exports = {
   aliases: ["re"],
   usage: "播放音樂",
   description: "重新播放暫停的音樂",
-  run: async (client, message, args) => {
+  run: async (client, message, args) => { //指令名字和用途
 
 
     const embed1 = new Discord.MessageEmbed()
@@ -21,7 +21,7 @@ module.exports = {
     const embed2 = new Discord.MessageEmbed()
     .setColor("RED")
     .setDescription("沒有正在播放的東西")
-		return message.channel.send(embed2);
+		return message.channel.send(embed2); //指令的程式
 
 
   }

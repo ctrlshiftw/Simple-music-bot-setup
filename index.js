@@ -8,20 +8,20 @@ const client = new discord.Client({
 const config = require('./config.json')
 const keepAlive = require('./server.js')
 keepAlive();
-
+//機器人前期準備
 client.commands = new discord.Collection();
 client.aliases = new discord.Collection();
 client.queue = new Map();
-
+//信息準備
 client.on('ready', () => {
   console.log('I am ready')
   client.user.setUsername("機器人名字")
   client.user.setPresence({ activity: {name:""},status: "online"}) 
 });
+//機器人名字和狀態
 
 
-
-const Categories = ["music"]; //Commands => Category => Command
+const Categories = ["music"]; //指令(不要動)
 
 Categories.forEach(async function(Category) { //
     fs.readdir(`./commands/${Category}`, async function(error, files) {
@@ -38,7 +38,7 @@ Categories.forEach(async function(Category) { //
     });
 });
 
-client.on("message", async message => {
+client.on("message", async message => { //指令(這個也不要動)
 
   let Prefix = config.prefix
 
@@ -61,5 +61,5 @@ client.on("message", async message => {
 });
 
 
-
+//機器人種籽
 client.login(process.env.token)

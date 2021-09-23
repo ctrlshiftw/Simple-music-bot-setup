@@ -4,7 +4,7 @@ module.exports = {
   aliases: ["st"],
   usage: "停止播放",
   description: "停止所有的音樂",
-  run: async (client, message, args) => {
+  run: async (client, message, args) => { //指令名字和用途
 
     
     const embed1 = new Discord.MessageEmbed()
@@ -25,7 +25,7 @@ const stopped = new Discord.MessageEmbed()
 .setColor("GREEN")
 .setDescription("音樂結束了..")
 
-message.channel.send(stopped)
+message.channel.send(stopped) //指令的程式
 
   }
 }

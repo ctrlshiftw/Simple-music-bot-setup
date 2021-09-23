@@ -5,7 +5,7 @@ module.exports = {
   aliases: ["s"],
   usage: "跳過",
   description: "跳過現在的音樂",
-  run: async (client, message, args) => {
+  run: async (client, message, args) => { //指令名字和用途
 
 
 	const { channel } = message.member.voice;
@@ -19,7 +19,7 @@ module.exports = {
     .setColor("RED")
 		if (!serverQueue) return message.channel.send(embed2);
 
-		serverQueue.connection.dispatcher.end('已經跳過了');
+		serverQueue.connection.dispatcher.end('已經跳過了'); //指令的程式
 
   }
 }

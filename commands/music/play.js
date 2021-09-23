@@ -8,7 +8,7 @@ module.exports = {
   aliases: ["p"],
   usage: "p <音樂>",
   description: "播放或者加入一個你喜歡的音樂",
-  run: async (client, message, args) => {
+  run: async (client, message, args) => { //指令名字和用途
 
 
 
@@ -100,7 +100,7 @@ module.exports = {
 
     } else {
       message.channel.send(embed7)
-    };
+    };//指令的程式
 
 	}
 };

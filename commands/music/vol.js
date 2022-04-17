@@ -13,10 +13,6 @@ const embed1 = new Discord.MessageEmbed()
 .setDescription("你要在一個語音頻道裡面")
 
 
-
-
-
-
 		const { channel } = message.member.voice;
 		if (!channel) return message.channel.send(embed1);
 		const serverQueue = message.client.queue.get(message.guild.id);
@@ -32,7 +28,7 @@ const embed1 = new Discord.MessageEmbed()
 .setDescription(`現在的聲音大小是: **${serverQueue.volume}**`)
 
 		if (!args[0]) return message.channel.send(embed3);
-		serverQueue.volume = args[0]; // eslint-disable-line
+		serverQueue.volume = args[0]; 
     
     if (parseInt(args[0], 10) > 10 || typeof(parseInt(args[0], 10)) !== "number") return message.channel.send(embed3) 
 
@@ -42,7 +38,7 @@ const embed1 = new Discord.MessageEmbed()
 
 
 		serverQueue.connection.dispatcher.setVolumeLogarithmic(args[0] / 5);
-		return message.channel.send(embed4); //指令的車鞥是
+		return message.channel.send(embed4); //指令的程式
 
 
   }

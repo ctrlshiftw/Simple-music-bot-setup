@@ -23,7 +23,7 @@ client.on('ready', () => {
 
 const Categories = ["music"]; //指令(不要動)
 
-Categories.forEach(async function(Category) { //
+Categories.forEach(async function(Category) { 
     fs.readdir(`./commands/${Category}`, async function(error, files) {
       if (error) throw new Error(`Error In Command - Command Handler\n${error}`);
       files.forEach(async function(file) {
@@ -36,7 +36,7 @@ Categories.forEach(async function(Category) { //
         if (command.aliases.length === 0) command.aliases = null;
       });
     });
-});
+}); //這裏我拿英文寫的，内容只是報錯誤
 
 client.on("message", async message => { //指令(這個也不要動)
 
@@ -51,7 +51,7 @@ client.on("message", async message => { //指令(這個也不要動)
 
   let command = client.commands.get(cmd) || client.commands.get(client.aliases.get(cmd));
 
-  if (!command) return console.log(`No Command Found!`);
+  if (!command) return console.log(`沒有指令`);
 
 
 

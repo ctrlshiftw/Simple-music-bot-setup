@@ -12,10 +12,6 @@ module.exports = {
 
 
 
-
-
-
-
     
     const embed1 = new Discord.MessageEmbed()
     .setDescription("你要在一個語音頻道裡面")
